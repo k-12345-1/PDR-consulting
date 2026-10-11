@@ -6,6 +6,8 @@
 <meta name="description" content="PDR Consulting helps organizations turn strategy into action through organizational design, leadership and team development, executive coaching, and change consulting.">
 <meta name="theme-color" content="#2A6653">
 <link rel="icon" type="image/svg+xml" href="brand/favicon.svg">
+<style>html.motion [data-slide]>*,html.motion [data-pop]>*,html.motion [data-items]>*{opacity:0}</style>
+<script>if(!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches))document.documentElement.classList.add('motion');</script>
 <meta property="og:title" content="PDR Consulting | Strategy, Organizational Design &amp; Leadership">
 <meta property="og:image" content="brand/pdr-logo.svg">
 <title>PDR Consulting | Strategy, Organizational Design &amp; Leadership</title>
@@ -23,6 +25,9 @@ a{color:#2A6653}a:hover{color:#1F3D34}
 .g-track{display:flex;width:max-content;will-change:transform;animation:g-marquee 70s linear infinite}
 .nl{white-space:normal}
 @media (min-width: 1180px){.nl{white-space:nowrap}}
+.nav-wrap{flex-wrap:nowrap !important}
+@media (max-width: 720px){.nav-text{display:none}.nav-logo{height:40px !important}}
+@media (max-width: 380px){.nav-logo{height:34px !important}}
 @keyframes g-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @media (prefers-reduced-motion: reduce){.g-track{animation:none}}
 </style>
@@ -35,15 +40,15 @@ a{color:#2A6653}a:hover{color:#1F3D34}
 
   <!-- 1. NAV -->
   <header style="position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,0.92); backdrop-filter: blur(10px); border-bottom: 1px solid #E3E6E4;">
-    <div style="max-width: 1320px; margin: 0 auto; padding: 16px clamp(20px, 4vw, 40px); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 32px;">
-      <a href="#main" aria-label="PDR Consulting — Performance. Development. Results." style="display: flex; align-items: center; padding: 4px 0;">
-        <img src="brand/pdr-logo.svg" alt="PDR Consulting — Performance. Development. Results." style="display: block; height: 46px; width: auto;">
+    <div class="nav-wrap" style="max-width: 1320px; margin: 0 auto; padding: 14px clamp(16px, 4vw, 40px); display: flex; align-items: center; justify-content: space-between; gap: 16px 32px;">
+      <a href="#main" aria-label="PDR Consulting — Performance. Development. Results." style="display: flex; align-items: center; padding: 4px 0; min-width: 0;">
+        <img class="nav-logo" src="brand/pdr-logo.svg" alt="PDR Consulting — Performance. Development. Results." style="display: block; height: 46px; width: auto; max-width: 100%;">
       </a>
-      <nav aria-label="Primary" style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px 28px; font-size: 15.5px; font-weight: 500;">
-        <a href="#services" style="color: #13241F; text-decoration: none; padding: 10px 0;">How we help</a>
-        <a href="#experience" style="color: #13241F; text-decoration: none; padding: 10px 0;">Experience</a>
-        <a href="#testimonials" style="color: #13241F; text-decoration: none; padding: 10px 0;">Client stories</a>
-        <a class="g-navy" href="#contact" style="background: #2A6653; color: #FFFFFF; text-decoration: none; padding: 11px 22px; border-radius: 999px; font-weight: 600; transition: background .2s;">Let’s talk</a>
+      <nav aria-label="Primary" style="display: flex; align-items: center; gap: 4px 28px; font-size: 15.5px; font-weight: 500; flex-shrink: 0;">
+        <a class="nav-text" href="#services" style="color: #13241F; text-decoration: none; padding: 10px 0;">How we help</a>
+        <a class="nav-text" href="#experience" style="color: #13241F; text-decoration: none; padding: 10px 0;">Experience</a>
+        <a class="nav-text" href="#testimonials" style="color: #13241F; text-decoration: none; padding: 10px 0;">Client stories</a>
+        <a class="g-navy" href="#contact" style="background: #2A6653; color: #FFFFFF; text-decoration: none; padding: 11px 20px; border-radius: 999px; font-weight: 600; white-space: nowrap; transition: background .2s;">Let’s talk</a>
       </nav>
     </div>
   </header>
@@ -52,9 +57,9 @@ a{color:#2A6653}a:hover{color:#1F3D34}
 
     <!-- 2. HERO: centered headline, single CTA row, wide media below -->
     <section style="background: #F3F4F3; padding: clamp(64px, 8vw, 104px) clamp(20px, 4vw, 40px) 0;">
-      <div data-animation="slide-up" style="max-width: 980px; margin: 0 auto; text-align: center;">
+      <div data-animation="slide-up" style="max-width: 1180px; margin: 0 auto; text-align: center;">
         <p style="margin: 0 0 24px; font-size: 15px; font-weight: 500; color: #4A5B55;">PDR Consulting · Strategy, people &amp; performance</p>
-        <h1 style="margin: 0; font-weight: 500; font-size: clamp(48px, 7vw, 104px); line-height: 0.98; letter-spacing: -0.045em; color: #2A6653;">Clear direction.<br>Stronger organizations.</h1>
+        <h1 style="margin: 0; font-weight: 500; font-size: clamp(42px, 7vw, 100px); line-height: 0.98; text-wrap: balance; letter-spacing: -0.045em; color: #2A6653;">Clear direction.<br>Stronger organizations.</h1>
         <p style="margin: 28px auto 0; max-width: 620px; font-size: clamp(18px, 1.5vw, 21px); color: #2F403A;">We help organizations turn strategy into action—with the right structure, effective leaders, and teams that work well together.</p>
         <div style="margin-top: 36px; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;">
           <a class="g-navy" href="#contact" style="display: inline-flex; align-items: center; min-height: 54px; padding: 0 30px; border-radius: 999px; background: #2A6653; color: #FFFFFF; text-decoration: none; font-weight: 600; transition: background .2s;">Let’s discuss your goals</a>
@@ -149,7 +154,7 @@ a{color:#2A6653}a:hover{color:#1F3D34}
 
     <!-- 4. PROOF STRIP (Garner's logo bar position) -->
     <section aria-label="At a glance" style="max-width: 1320px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 40px) clamp(72px, 8vw, 112px);">
-      <div data-stagger style="padding: 8px 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 28px; text-align: center;">
+      <div data-stagger style="padding: 8px 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr)); gap: 28px 16px; text-align: center;">
         <div><div data-count style="font-size: clamp(40px, 4vw, 54px); font-weight: 500; letter-spacing: -0.04em; line-height: 1; color: #2A6653; font-variant-numeric: tabular-nums;">1,500+</div><div style="margin-top: 8px; color: #4A5B55; font-size: 15.5px;">leaders coached</div></div>
         <div><div data-count style="font-size: clamp(40px, 4vw, 54px); font-weight: 500; letter-spacing: -0.04em; line-height: 1; color: #2A6653; font-variant-numeric: tabular-nums;">20+</div><div style="margin-top: 8px; color: #4A5B55; font-size: 15.5px;">years of corporate experience</div></div>
         <div><div data-count style="font-size: clamp(40px, 4vw, 54px); font-weight: 500; letter-spacing: -0.04em; line-height: 1; color: #2A6653; font-variant-numeric: tabular-nums;">35+</div><div style="margin-top: 8px; color: #4A5B55; font-size: 15.5px;">organizations served by PDR</div></div>
@@ -165,8 +170,8 @@ a{color:#2A6653}a:hover{color:#1F3D34}
           <h2 class="nl" style="margin: 0; font-weight: 500; font-size: clamp(34px, 4vw, 56px); line-height: 1.04; letter-spacing: -0.04em;">Experience that translates into progress.</h2>
           <p class="nl" style="margin: 18px 0 0; font-size: 18px; color: #DCEDE6;">Examples of connecting strategy, organizational design, and people across consulting and corporate leadership roles.</p>
         </div>
-        <div data-stagger style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 16px;">
-          <div style="background: rgba(255,255,255,0.07); border-radius: 24px; padding: 32px;">
+        <div data-stagger style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 16px;">
+          <div style="background: rgba(255,255,255,0.07); border-radius: 24px; padding: clamp(22px, 2.6vw, 32px);">
             <div style="min-height: 104px;">
               <div data-count style="font-size: clamp(52px, 5vw, 72px); font-weight: 500; letter-spacing: -0.045em; line-height: 1; font-variant-numeric: tabular-nums;">20+</div>
               <div style="margin-top: 8px; font-size: 15px; font-weight: 500; color: #BFDCD0;">countries</div>
@@ -174,12 +179,12 @@ a{color:#2A6653}a:hover{color:#1F3D34}
             <h3 style="margin: 20px 0 10px; font-size: 21px; font-weight: 600;">Global hospitality experience</h3>
             <p style="margin: 0; font-size: 16px; color: #DCEDE6;">Coached 30+ executive and property leaders across more than 20 countries, helping them align corporate priorities with local cultures, strengthen owner relationships, and lead organizational change.</p>
           </div>
-          <div style="background: rgba(255,255,255,0.07); border-radius: 24px; padding: 32px;">
+          <div style="background: rgba(255,255,255,0.07); border-radius: 24px; padding: clamp(22px, 2.6vw, 32px);">
             <div style="min-height: 104px;"><div data-count style="font-size: clamp(52px, 5vw, 72px); font-weight: 500; letter-spacing: -0.045em; line-height: 1; font-variant-numeric: tabular-nums;">12</div></div>
             <h3 style="margin: 20px 0 10px; font-size: 21px; font-weight: 600;">Departments through change</h3>
             <p style="margin: 0; font-size: 16px; color: #DCEDE6;">Guided a major state university’s restructuring of 12 departments while preserving critical services. Related higher-education work redesigned library services to align specialist support with university strategy.</p>
           </div>
-          <div style="background: rgba(255,255,255,0.07); border-radius: 24px; padding: 32px;">
+          <div style="background: rgba(255,255,255,0.07); border-radius: 24px; padding: clamp(22px, 2.6vw, 32px);">
             <div style="min-height: 104px;"><div data-count style="font-size: clamp(52px, 5vw, 72px); font-weight: 500; letter-spacing: -0.045em; line-height: 1; font-variant-numeric: tabular-nums;">2</div></div>
             <h3 style="margin: 20px 0 10px; font-size: 21px; font-weight: 600;">Major acquisitions integrated</h3>
             <p style="margin: 0; font-size: 16px; color: #DCEDE6;">At Marsh &amp; McLennan, integrated three business cultures across two major acquisitions, leading 50 internal professionals and 100 external providers.</p>
@@ -209,7 +214,7 @@ a{color:#2A6653}a:hover{color:#1F3D34}
 
       <!-- Row B: visual left -->
       <div data-animation="fade" style="display: flex; flex-wrap: wrap-reverse; align-items: center; gap: 40px 72px;">
-        <div data-items aria-hidden="true" style="flex: 1 1 440px; min-width: 0; background: #2A6653; border-radius: 28px; padding: clamp(24px, 4vw, 48px); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; min-height: 320px; box-sizing: border-box;">
+        <div data-pop aria-hidden="true" style="flex: 1 1 440px; min-width: 0; overflow: hidden; background: #2A6653; border-radius: 28px; padding: clamp(24px, 4vw, 48px); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; min-height: 320px; box-sizing: border-box;">
           <div style="background: rgba(255,255,255,0.1); border-radius: 18px; padding: 24px; color: #FFFFFF; font-size: clamp(22px, 2.4vw, 30px); font-weight: 500; letter-spacing: -0.02em; display: flex; align-items: flex-end;">EA Sports</div>
           <div style="background: #FFFFFF; border-radius: 18px; padding: 24px; color: #2A6653; font-size: clamp(22px, 2.4vw, 30px); font-weight: 500; letter-spacing: -0.02em; display: flex; align-items: flex-end;">Frost Giant</div>
         </div>
@@ -226,7 +231,7 @@ a{color:#2A6653}a:hover{color:#1F3D34}
           <p style="margin: 0; max-width: 34em; font-size: 18px; color: #4A5B55;">Five of eight participants in an architectural firm’s leadership program advanced into principal or studio-leader roles within two years.</p>
           <p style="margin: 16px 0 0; max-width: 34em; font-size: 18px; color: #4A5B55;">As a Zenger Folkman associate, Patricia also facilitated 100+ leadership workshops with an average participant rating of 4.7 out of 5.</p>
         </div>
-        <div data-slide aria-hidden="true" style="flex: 1 1 440px; min-width: 0; overflow: hidden; background: #F3F4F3; border-radius: 28px; padding: clamp(24px, 4vw, 48px); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px;">
+        <div data-items aria-hidden="true" style="flex: 1 1 440px; min-width: 0; overflow: hidden; background: #F3F4F3; border-radius: 28px; padding: clamp(24px, 4vw, 48px); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px;">
           <div style="grid-column: span 2; background: #FFFFFF; border-radius: 18px; padding: 24px;"><div style="font-size: 56px; font-weight: 500; letter-spacing: -0.045em; line-height: 1; color: #2A6653;">5 of 8</div><div style="margin-top: 8px; font-size: 15px; color: #4A5B55;">advanced into principal or studio-leader roles</div></div>
           <div style="background: #FFFFFF; border-radius: 18px; padding: 24px;"><div style="font-size: 44px; font-weight: 500; letter-spacing: -0.04em; line-height: 1; color: #2A6653;">100+</div><div style="margin-top: 8px; font-size: 15px; color: #4A5B55;">leadership workshops</div></div>
           <div style="background: #2A6653; color: #FFFFFF; border-radius: 18px; padding: 24px;"><div style="font-size: 44px; font-weight: 500; letter-spacing: -0.04em; line-height: 1;">4.7/5</div><div style="margin-top: 8px; font-size: 15px; color: #DCEDE6;">average participant rating</div></div>
@@ -256,27 +261,27 @@ a{color:#2A6653}a:hover{color:#1F3D34}
       </div>
       <div class="g-marquee" data-marquee style="overflow: hidden; padding-left: 16px;">
         <div class="g-track">
-          <figure style="flex: 0 0 400px; margin: 0 16px 0 0; background: #FFFFFF; border-radius: 24px; padding: 30px; display: flex; flex-direction: column; justify-content: space-between; gap: 32px; box-sizing: border-box;">
+          <figure style="flex: 0 0 min(400px, 80vw); margin: 0 16px 0 0; background: #FFFFFF; border-radius: 24px; padding: 30px; display: flex; flex-direction: column; justify-content: space-between; gap: 32px; box-sizing: border-box;">
             <blockquote style="margin: 0; font-size: 20px; font-weight: 500; line-height: 1.35; letter-spacing: -0.01em;">“She provided big picture guidance as well as realistic next steps to implement the strategy.”</blockquote>
             <figcaption style="font-size: 14.5px; color: #4A5B55;"><strong style="display: block; color: #13241F; font-weight: 600;">Dana Jacobsohn</strong>Marriott · Strategy &amp; executive coaching</figcaption>
           </figure>
-          <figure style="flex: 0 0 400px; margin: 0 16px 0 0; background: #FFFFFF; border-radius: 24px; padding: 30px; display: flex; flex-direction: column; justify-content: space-between; gap: 32px; box-sizing: border-box;">
+          <figure style="flex: 0 0 min(400px, 80vw); margin: 0 16px 0 0; background: #FFFFFF; border-radius: 24px; padding: 30px; display: flex; flex-direction: column; justify-content: space-between; gap: 32px; box-sizing: border-box;">
             <blockquote style="margin: 0; font-size: 20px; font-weight: 500; line-height: 1.35; letter-spacing: -0.01em;">“I worked with her for two years during a pivotal transition into an executive role, and the impact was profound.”</blockquote>
             <figcaption style="font-size: 14.5px; color: #4A5B55;"><strong style="display: block; color: #13241F; font-weight: 600;">Angélica Afanador-Ardila</strong>PCAF / Guidehouse · Executive transition coaching</figcaption>
           </figure>
-          <figure style="flex: 0 0 400px; margin: 0 16px 0 0; background: #FFFFFF; border-radius: 24px; padding: 30px; display: flex; flex-direction: column; justify-content: space-between; gap: 32px; box-sizing: border-box;">
+          <figure style="flex: 0 0 min(400px, 80vw); margin: 0 16px 0 0; background: #FFFFFF; border-radius: 24px; padding: 30px; display: flex; flex-direction: column; justify-content: space-between; gap: 32px; box-sizing: border-box;">
             <blockquote style="margin: 0; font-size: 20px; font-weight: 500; line-height: 1.35; letter-spacing: -0.01em;">“Patricia entered every meeting with a curiosity about me as a client and person, and provided a strategy for process and personal improvements.”</blockquote>
             <figcaption style="font-size: 14.5px; color: #4A5B55;"><strong style="display: block; color: #13241F; font-weight: 600;">Belinda Hyppolite, Ed.D.</strong>OU Access &amp; Opportunity · Leadership &amp; strategic priorities</figcaption>
           </figure>
-          <figure aria-hidden="true" style="flex: 0 0 400px; margin: 0 16px 0 0; background: #FFFFFF; border-radius: 24px; padding: 30px; display: flex; flex-direction: column; justify-content: space-between; gap: 32px; box-sizing: border-box;">
+          <figure aria-hidden="true" style="flex: 0 0 min(400px, 80vw); margin: 0 16px 0 0; background: #FFFFFF; border-radius: 24px; padding: 30px; display: flex; flex-direction: column; justify-content: space-between; gap: 32px; box-sizing: border-box;">
             <blockquote style="margin: 0; font-size: 20px; font-weight: 500; line-height: 1.35; letter-spacing: -0.01em;">“She provided big picture guidance as well as realistic next steps to implement the strategy.”</blockquote>
             <figcaption style="font-size: 14.5px; color: #4A5B55;"><strong style="display: block; color: #13241F; font-weight: 600;">Dana Jacobsohn</strong>Marriott · Strategy &amp; executive coaching</figcaption>
           </figure>
-          <figure aria-hidden="true" style="flex: 0 0 400px; margin: 0 16px 0 0; background: #FFFFFF; border-radius: 24px; padding: 30px; display: flex; flex-direction: column; justify-content: space-between; gap: 32px; box-sizing: border-box;">
+          <figure aria-hidden="true" style="flex: 0 0 min(400px, 80vw); margin: 0 16px 0 0; background: #FFFFFF; border-radius: 24px; padding: 30px; display: flex; flex-direction: column; justify-content: space-between; gap: 32px; box-sizing: border-box;">
             <blockquote style="margin: 0; font-size: 20px; font-weight: 500; line-height: 1.35; letter-spacing: -0.01em;">“I worked with her for two years during a pivotal transition into an executive role, and the impact was profound.”</blockquote>
             <figcaption style="font-size: 14.5px; color: #4A5B55;"><strong style="display: block; color: #13241F; font-weight: 600;">Angélica Afanador-Ardila</strong>PCAF / Guidehouse · Executive transition coaching</figcaption>
           </figure>
-          <figure aria-hidden="true" style="flex: 0 0 400px; margin: 0 16px 0 0; background: #FFFFFF; border-radius: 24px; padding: 30px; display: flex; flex-direction: column; justify-content: space-between; gap: 32px; box-sizing: border-box;">
+          <figure aria-hidden="true" style="flex: 0 0 min(400px, 80vw); margin: 0 16px 0 0; background: #FFFFFF; border-radius: 24px; padding: 30px; display: flex; flex-direction: column; justify-content: space-between; gap: 32px; box-sizing: border-box;">
             <blockquote style="margin: 0; font-size: 20px; font-weight: 500; line-height: 1.35; letter-spacing: -0.01em;">“Patricia entered every meeting with a curiosity about me as a client and person, and provided a strategy for process and personal improvements.”</blockquote>
             <figcaption style="font-size: 14.5px; color: #4A5B55;"><strong style="display: block; color: #13241F; font-weight: 600;">Belinda Hyppolite, Ed.D.</strong>OU Access &amp; Opportunity · Leadership &amp; strategic priorities</figcaption>
           </figure>
@@ -352,7 +357,7 @@ a{color:#2A6653}a:hover{color:#1F3D34}
         <h2 style="margin: 0; font-weight: 500; font-size: clamp(32px, 3.6vw, 48px); line-height: 1.06; letter-spacing: -0.035em;">Your next step starts with a conversation.</h2>
         <p style="margin: 0; font-size: 17px; color: #4A5B55;">What needs to work better in your organization? Share your priorities, and we’ll explore a focused approach to moving forward.</p>
       </div>
-      <div data-bars style="background: #2A6653; color: #FFFFFF; border-radius: 28px; padding: clamp(32px, 4vw, 56px); display: flex; flex-direction: column; justify-content: flex-end; gap: 4px;">
+      <div style="background: #2A6653; color: #FFFFFF; border-radius: 28px; padding: clamp(32px, 4vw, 56px); display: flex; flex-direction: column; justify-content: flex-end; gap: 4px;">
         <a class="g-link" href="mailto:PatriciaRobinson@PDR-Consulting.com" style="display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.25); color: #FFFFFF; text-decoration: none; font-size: clamp(18px, 1.8vw, 22px); font-weight: 500; overflow-wrap: anywhere;">PatriciaRobinson@PDR-Consulting.com<span class="g-arrow" aria-hidden="true" style="transition: transform .2s;">→</span></a>
         <a class="g-link" href="https://www.linkedin.com/in/patriciadrobinson1/" style="display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 20px 0; color: #FFFFFF; text-decoration: none; font-size: clamp(18px, 1.8vw, 22px); font-weight: 500;">Connect on LinkedIn<span class="g-arrow" aria-hidden="true" style="transition: transform .2s;">→</span></a>
       </div>
@@ -389,7 +394,7 @@ a{color:#2A6653}a:hover{color:#1F3D34}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
 <script>
 (function () {
-  if (!window.gsap || !window.ScrollTrigger) return;
+  if (!window.gsap || !window.ScrollTrigger) { document.documentElement.classList.remove('motion'); return; }
   if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   gsap.registerPlugin(ScrollTrigger);
   function trig(el, start) { return { trigger: el, start: start, once: true, invalidateOnRefresh: true }; }
@@ -413,12 +418,17 @@ a{color:#2A6653}a:hover{color:#1F3D34}
   document.querySelectorAll('[data-slide]').forEach(function (el) {
     gsap.fromTo(el.children,
       { opacity: 0, xPercent: -110, willChange: 'transform, opacity', backfaceVisibility: 'hidden' },
-      { opacity: 1, xPercent: 0, force3D: true, duration: 1.8, ease: 'power3.out', stagger: 0.3, scrollTrigger: trig(el, 'top 75%') });
+      { opacity: 1, xPercent: 0, force3D: true, duration: 1.8, ease: 'power3.out', stagger: 0.3, scrollTrigger: trig(el, 'top 65%') });
+  });
+  document.querySelectorAll('[data-pop]').forEach(function (el) {
+    gsap.fromTo(el.children,
+      { opacity: 0, yPercent: 120, scale: 0.8, rotation: function (i) { return i % 2 ? 6 : -6; }, willChange: 'transform, opacity', backfaceVisibility: 'hidden' },
+      { opacity: 1, yPercent: 0, scale: 1, rotation: 0, force3D: true, duration: 2.2, ease: 'expo.out', stagger: 0.45, scrollTrigger: trig(el, 'top 65%') });
   });
   document.querySelectorAll('[data-items]').forEach(function (el) {
     gsap.fromTo(el.children,
       { opacity: 0, y: 40, willChange: 'transform, opacity', backfaceVisibility: 'hidden' },
-      { opacity: 1, y: 0, force3D: true, duration: 2.2, ease: 'power4.out', stagger: 0.4, scrollTrigger: trig(el, 'top 75%') });
+      { opacity: 1, y: 0, force3D: true, duration: 2.2, ease: 'power4.out', stagger: 0.4, scrollTrigger: trig(el, 'top 65%') });
   });
   document.querySelectorAll('[data-marquee]').forEach(function (wrap) {
     var track = wrap.firstElementChild;
